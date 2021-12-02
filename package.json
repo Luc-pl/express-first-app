@@ -1,0 +1,11 @@
+{
+    "name": "protect-your-eyes-app",
+    "version": "1.0.0",
+    "main": "app.js",
+    "repository": "https://github.com/Luc-pl/express-first-app",
+    "license": "MIT",
+    "scripts": {},
+    "dependencies": {
+        "express": "4.17.1"
+    }
+}
