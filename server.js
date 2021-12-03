@@ -3,6 +3,10 @@ const path = require('path');
 
 const app = express();
 
+app.listen(8000, () => {
+  console.log('Server is running on port: 8000');
+});
+
 app.use((req, res, next) => {
   res.show = (name) => {
     res.sendFile(path.join(__dirname, `/views/${name}`));
@@ -30,10 +34,8 @@ app.get('/history', (req, res) => {
   res.show('history.html');
 });
 
+app.use(express.static(path.join(__dirname, '/public')));
+
 app.use((req, res) => {
   res.status(404).send('404 not found...');
 })
-
-app.listen(8000, () => {
-  console.log('Server is running on port: 8000');
-});
